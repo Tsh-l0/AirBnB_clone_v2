@@ -14,7 +14,8 @@ Default value of text is “is cool
 
 /number/<n>: display “n is a number” only if n is an integer
 
-Display a HTML page only if n is an integer when /number_template/<n> is called. H1 tag: “Number: n” inside the tag BODY
+Display a HTML page only if n is an integer when
+/number_template/<n> is called. H1 tag: “Number: n” inside the tag BODY
 """
 from flask import Flask
 from flask import render_template
@@ -61,6 +62,7 @@ def number_route(n):
     Displays “n is a number” when /number/<n> is called
     """
     return '{:d} is a number'.format(n)
+
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def number_template(n):
